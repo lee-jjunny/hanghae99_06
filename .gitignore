@@ -1,0 +1,82 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# 로그 파일
+*.log
+
+# 운영체제별 임시 파일
+Thumbs.db         # Windows 이미지 캐시
+ehthumbs.db       # Windows 미리보기
+Icon?             # macOS Finder 아이콘
+Desktop.ini       # Windows 바탕화면 설정
+
+# 빌드 도구 관련
+.mvn/wrapper/maven-wrapper.properties  # mvnw 설정 파일 제외하려면 (옵션)
+**/target/                             # 중첩된 모듈의 target 디렉토리 방지
+
+# 테스트 리포트
+**/test-output/
+**/surefire-reports/
+
+# 환경 설정 파일
+.env
+*.env
+*.local
+
+# IntelliJ 추가 캐시
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf/
+
+# Java 파일 생성 자동화 시 생기는 파일
+*.class
+*.war
+*.jar
+*.ear
+
+# JetBrains IDE 추가 설정
+.idea/httpRequests/
+
+# Linux 시스템 파일
+*~
+
+# Backup/Swap files
+*.swp
+*.swo
+*~
