@@ -13,10 +13,10 @@ public class PR_161990 {
         String[] wallpaper2 = {"..........", ".....#....", "......##..", "...##.....", "....#....."};
         String[] wallpaper3 = {".##...##.", "#..#.#..#", "#...#...#", ".#.....#.", "..#...#..", "...#.#...", "....#...."};
         String[] wallpaper4 = {"..", "#."};
-        int[] result1 = solution(wallpaper1);
-        int[] result2 = solution(wallpaper2);
-        int[] result3 = solution(wallpaper3);
-        int[] result4 = solution(wallpaper4);
+        int[] result1 = solution_improve(wallpaper1);
+        int[] result2 = solution_improve(wallpaper2);
+        int[] result3 = solution_improve(wallpaper3);
+        int[] result4 = solution_improve(wallpaper4);
 
         System.out.println(Arrays.toString(result1));
         System.out.println(Arrays.toString(result2));
@@ -24,6 +24,27 @@ public class PR_161990 {
         System.out.println(Arrays.toString(result4));
     }
 
+    /* [2] 문제풀이 - 개선 */
+    public static int[] solution_improve(String[] wallpaper) {
+        int ss = Integer.MAX_VALUE, se = Integer.MAX_VALUE;
+        int es = Integer.MIN_VALUE, ee = Integer.MIN_VALUE;
+
+        for (int i = 0; i < wallpaper.length; i++) {
+            String row = wallpaper[i];
+            for (int j = 0; j < row.length(); j++) {
+                if (row.charAt(j) == '#') {
+                    ss = Math.min(ss, i);
+                    se = Math.min(se, j);
+                    es = Math.max(es, i);
+                    ee = Math.max(ee, j);
+                }
+            }
+        }
+
+        return new int[]{ss, se, es + 1, ee + 1};
+    }
+
+    /* [1] 문제풀이 */
     public static int[] solution(String[] wallpaper) {
         Integer ss = null, se = null;
         Integer es = null, ee = null;
